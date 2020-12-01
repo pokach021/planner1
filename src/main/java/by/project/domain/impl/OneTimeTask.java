@@ -1,13 +1,14 @@
 package by.project.domain.impl;
 
+import by.project.domain.Category;
 import by.project.domain.PlannerFields;
+import by.project.domain.Priority;
 
 public class OneTimeTask extends PlannerFields {
     private int anything;
 
-    public OneTimeTask(String taskName, String taskCategory, String taskPriority,
-                       String taskDate, int anything) {
-        super(taskName, taskCategory, taskPriority, taskDate);
+    public OneTimeTask(String taskName, String taskDate, Category category, Priority priority, int anything) {
+        super(taskName, taskDate, category, priority);
         this.anything = anything;
     }
 

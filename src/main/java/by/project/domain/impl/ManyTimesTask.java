@@ -1,12 +1,14 @@
 package by.project.domain.impl;
 
+import by.project.domain.Category;
 import by.project.domain.PlannerFields;
+import by.project.domain.Priority;
 
-public class ManyTimesTask extends PlannerFields {private String howOften;
+public class ManyTimesTask extends PlannerFields {
+    private String howOften;
 
-    public ManyTimesTask(String taskName, String taskCategory, String taskPriority,
-                         String taskDate, String howOften) {
-        super(taskName, taskCategory, taskPriority, taskDate);
+    public ManyTimesTask(String taskName, String taskDate, Category category, Priority priority, String howOften) {
+        super(taskName, taskDate, category, priority);
         this.howOften = howOften;
     }
 

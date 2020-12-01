@@ -2,15 +2,15 @@ package by.project.domain;
 
 public abstract class PlannerFields implements Completing {
     private String taskName;
-    private String taskCategory;
-    private String taskPriority;
     private String taskDate;
+    private Category category;
+    private Priority priority;
 
-    public PlannerFields(String taskName, String taskCategory, String taskPriority, String taskDate) {
+    public PlannerFields(String taskName, String taskDate, Category category, Priority priority) {
         this.taskName = taskName;
-        this.taskCategory = taskCategory;
-        this.taskPriority = taskPriority;
         this.taskDate = taskDate;
+        this.category = category;
+        this.priority = priority;
     }
 
     public void complete() {
@@ -27,10 +27,11 @@ public abstract class PlannerFields implements Completing {
 
     @Override
     public String toString() {
-        return "PlannerFields:" + "\n" +
-                "taskName:'" + taskName + '\'' +
-                ", taskCategory:'" + taskCategory + '\'' +
-                ", taskPriority:'" + taskPriority + '\'' +
-                ", taskDate:'" + taskDate;
+        return "PlannerFields{" +
+                "taskName='" + taskName + '\'' +
+                ", taskDate='" + taskDate + '\'' +
+                ", category=" + category +
+                ", priority=" + priority +
+                '}';
     }
 }
